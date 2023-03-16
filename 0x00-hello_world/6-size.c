@@ -1,5 +1,4 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
 /**
  * main - finds the size of various data types
  * Return: 0 if everything works fine
