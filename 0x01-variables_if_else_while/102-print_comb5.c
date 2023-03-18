@@ -27,17 +27,16 @@ int main(void)
 						putchar(' ');
 						putchar(k + '0');
 						putchar(z + '0');
-					}
+						if (i == 9 && j == 8 && k == 9 && z == 9)
+						{
+							putchar('\n');
+						}
 
-					if (i == 9 && j == 8 && k == 9 && z == 9)
-					{
-						putchar('\n');
-					}
-
-					else
-					{
-						putchar(',');
-						putchar(' ');
+						else
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
