@@ -20,7 +20,7 @@ int main(void)
 			{
 				for (z = 0; z < 10; z++)
 				{
-					if ((i <= k) || (i < k))
+					if (i <= k && j <= k)
 					{
 						putchar(i + '0');
 						putchar(j + '0');
