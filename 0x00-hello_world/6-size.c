@@ -3,7 +3,8 @@
  * main - finds the size of various data types
  * Return: 0 if everything works fine
  */
-int main() {
+int main(void)
+{
 	int intType;
 	float floatType;
 	double doubleType;
