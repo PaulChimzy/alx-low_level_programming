@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_sign - determines the sign of a number
+ * _abs - converts a number to absolute number
  * @n: an integer for testing
  * Return: returns 1 if true else returns 0
  */
@@ -16,6 +16,6 @@ int _abs(int n)
 
 	else
 	{
-		return (n*-1);
+		return (n * -1);
 	}
 }
