@@ -18,7 +18,7 @@ void jack_bauer(void)
 		_putchar('0' + one);
 		for (two = 0; two < 10; two++)
 		{
-			_putchar('0' + tw0);
+			_putchar('0' + two);
 			_putchar(':');
 			for (three = 0; three < 7; three++)
 			{
