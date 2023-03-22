@@ -3,8 +3,6 @@
 
 /**
  * times_table - prints the 9 times table
- * @n: an integer for testing
- * Return: returns 1 if true else returns 0
  */
 
 void times_table(void)
@@ -16,7 +14,7 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			_putchar('0' + i * j);
+			_putchar('0' + (i * j));
 			_putchar(',');
 			_putchar(' ');
 		}
