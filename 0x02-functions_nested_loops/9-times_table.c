@@ -16,22 +16,42 @@ void times_table(void)
 		{
 			if ((i * j) > 9)
 			{
-				_putchar('0' + (i * j) / 10);
-				_putchar('0' + (i * j) % 10);
 				if (j != 9)
 				{
-					_putchar(',');
 					_putchar(' ');
+					_putchar('0' + (i * j) / 10);
+					_putchar('0' + (i * j) % 10);
+					_putchar(',');
+				}
+				
+				else
+				{
+					_putchar(' ');
+					_putchar('0' + (i * j) / 10);
+					_putchar('0' + (i * j) % 10);
 				}
 			}
 			else
 			{
-				_putchar('0' + (i * j));
-				if (j != 9)
+				if (j == 0)
 				{
+					_putchar('0' + (i * j));
 					_putchar(',');
+				}
+				
+				else if (j != 9)
+				{
 					_putchar(' ');
 					_putchar(' ');
+					_putchar('0' + (i * j));
+					_putchar(',');
+				}
+				
+				else
+				{
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0' + (i * j));
 				}
 			}
 		}
