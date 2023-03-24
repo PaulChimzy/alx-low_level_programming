@@ -3,7 +3,7 @@
 
 /**
  * print_square - prints a square of  a given size using #
- * @n: The number of times # should be printed to form a square
+ * @size: The number of times # should be printed to form a square
  * Return: returns 0 if everything works fine
  */
 
