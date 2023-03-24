@@ -20,7 +20,7 @@ void print_diagonal(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-			_putchar(92);
+			_putchar(43);
 		}
 		_putchar('\n');
 	}
