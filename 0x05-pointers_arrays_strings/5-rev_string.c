@@ -37,4 +37,5 @@ void rev_string(char *s)
 			count--;
 			counter++;
 		}
+	}
 }
