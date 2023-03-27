@@ -25,6 +25,7 @@ void rev_string(char *s)
 		{
 			temp = *(s + count);
 			*(s + count) = *(s + counter);
+			*(s + counter) = temp;
 			count--;
 			counter++;
 		}
@@ -35,6 +36,7 @@ void rev_string(char *s)
 		{
 			temp = *(s + count);
 			*(s + count) = *(s + counter);
+			*(s + counter) = temp;
 			count--;
 			counter++;
 		}
