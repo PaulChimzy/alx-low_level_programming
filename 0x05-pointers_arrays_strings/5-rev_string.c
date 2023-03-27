@@ -10,35 +10,25 @@ void rev_string(char *s)
 	int count;
 	char temp;
 	int counter;
+	int i;
+	int j;
 
 	count = 0;
-	temp = 'a';
 	while (*(s + count) != '\0')
 	{
 		count++;
 	}
 	count--;
-	counter = 0;
-	if (count % 2 != 0)
-	{	
-		while (count != counter + 1)
-		{
-			temp = *(s + count);
-			*(s + count) = *(s + counter);
-			*(s + counter) = temp;
-			count--;
-			counter++;
-		}
-	}
-	else
+	counter = count;
+
+	for (i = 0; i < count; i++)
 	{
-		while (count != counter)
+		for (j = 0; j < counter; j++)
 		{
-			temp = *(s + count);
-			*(s + count) = *(s + counter);
-			*(s + counter) = temp;
-			count--;
-			counter++;
+			temp = *(s + j);
+			*(s + j) = *(s + j + 1);
+			*(s + j + 1) = temp;
 		}
+		counter--;
 	}
 }
