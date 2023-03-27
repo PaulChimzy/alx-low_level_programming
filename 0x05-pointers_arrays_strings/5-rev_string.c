@@ -12,6 +12,7 @@ void rev_string(char *s)
 	int counter;
 
 	count = 0;
+	temp = 'a';
 	while (*(s + count) != '\0')
 	{
 		count++;
