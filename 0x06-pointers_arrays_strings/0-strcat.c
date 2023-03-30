@@ -8,7 +8,7 @@
  * Return: A pointer to the concatenated string
  */
 
- char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int count;
 	int counter;
