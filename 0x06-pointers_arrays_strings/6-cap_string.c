@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * cap_string - converts all lowercase characters to uppercase based on some delimeters
+ * cap_string - converts all lowercase characters to 
+ * uppercase based on some delimeters
  * @s: pointer to the string to be converted to uppercase
  * Return: a pointer to the converted string
  */
