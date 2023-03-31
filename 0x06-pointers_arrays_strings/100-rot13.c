@@ -18,7 +18,14 @@ char *rot13(char *s)
 	count = 0;
 	while (*(s + count) != '\0')
 	{
-		for (
+		for (i = 0; i < 53; i++)
 		{
-			
+			if (*(s + count) == letter[i])
+			{
+				*(s + count) = code[i];
+			}
+		}
+		count++;
+	}
+	return (s);		
 }
