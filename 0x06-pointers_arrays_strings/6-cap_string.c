@@ -25,7 +25,11 @@ char *cap_string(char *s)
 		}
 		else
 		{
-			if (*(s + count - 1) == ' ' || *(s + count - 1) == '!' || *(s + count - 1) == 34 || *(s + count - 1) == '\t' || *(s + count - 1) == '\n' || *(s + count - 1) == ',' || *(s + count - 1) == ';' || *(s + count - 1) == '.' || *(s + count - 1) == '?' || *(s + count - 1) == '(' || *(s + count - 1) == ')' || *(s + count - 1) == '{' || *(s + count - 1) == '}')
+			if (*(s + count - 1) == ' ' || *(s + count - 1) == '!' || *(s + count - 1) == 34 
+			    || *(s + count - 1) == '\t' || *(s + count - 1) == '\n' || *(s + count - 1) == ',' 
+			    || *(s + count - 1) == ';' || *(s + count - 1) == '.' || *(s + count - 1) == '?' 
+			    || *(s + count - 1) == '(' || *(s + count - 1) == ')' || *(s + count - 1) == '{' 
+			    || *(s + count - 1) == '}')
 			{
 				if (*(s + count) > 96 && *(s + count) < 123)
 				{
