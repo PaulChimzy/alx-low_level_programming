@@ -27,20 +27,16 @@ unsigned int _strspn(char *s, char *accept)
 				found = 1;
 				break;
 			}
-			else
-			{
-				counter++;
-			}
+			counter++;
 		}
-		if (found)
+		if (found == 1)
 		{
 			found = 0;
 			count++;
+			continue;
 		}
-		else
-		{
-			break;
-		}
+		count++;
+		break;
 	}
 	return (count);
 }
