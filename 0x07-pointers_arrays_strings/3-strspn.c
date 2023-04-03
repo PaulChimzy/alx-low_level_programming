@@ -12,9 +12,11 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count;
 	int counter;
+	bool found;
 
 	count = 0;
 	counter = 0;
+	found = 0;
 	while (*(s + count) != '\0')
 	{
 		counter = 0;
@@ -22,6 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (*(s + count) == *(accept + counter))
 			{
+				found = 1;
 				break;
 			}
 			else
@@ -29,7 +32,15 @@ unsigned int _strspn(char *s, char *accept)
 				counter++;
 			}
 		}
-		count++;
+		if (found)
+		{
+			found = 0;
+			count++;
+		}
+		else
+		{
+			break;
+		}
 	}
-	return (count--);
+	return (count);
 }
