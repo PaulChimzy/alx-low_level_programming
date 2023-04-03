@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include "main.h"
-
 /**
  * _strspn - finds the offset index where strings no longer match
  * @s: pointer to string that should be checked
  * @accept: pointer to the reference string
  * Return: length of string which matches the reference string
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count;
