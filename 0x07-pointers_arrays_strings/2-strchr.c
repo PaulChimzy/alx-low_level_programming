@@ -19,7 +19,7 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + count) == c)
 		{
-			chracter = (s + count - 1);
+			chracter = &(s + count);
 			break;
 		}
 		count++;
