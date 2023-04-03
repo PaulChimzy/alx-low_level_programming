@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strchr - finds the first occurence of character in a string
+ * _strpbrk - finds the first occurence of character in a string
  * @s: pointer to the string to be searched
  * @accept: reference string
  * Return: pointer to the character in the string if ound else pointer to NULL
@@ -20,7 +20,7 @@ char *_strpbrk(char *s, char *accept)
 	while (*(s + count) != '\0')
 	{
 		counter = 0;
-		while (*(s + counter) != '\0')
+		while (*(accept + counter) != '\0')
 		{
 			if (*(s + count) == *(accept + counter))
 			{
