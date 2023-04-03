@@ -23,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 		counter = 0;
 		if (*(needle + counter) == *(haystack + count))
 		{
-			counter2 = count
+			counter2 = count;
 			while (*(needle + counter) != '\0')
 			{
 				if (*(needle + counter) != *(haystack + counter2))
@@ -34,7 +34,7 @@ char *_strstr(char *haystack, char *needle)
 				counter2++;
 				if (*(needle + counter) == '\0')
 				{
-					character = (s + count);
+					character = (haystack + count);
 					return (character);
 				}
 			}
