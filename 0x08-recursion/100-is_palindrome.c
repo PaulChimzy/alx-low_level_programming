@@ -22,7 +22,7 @@ int _strlen_recursion(char *s)
  * @count: length of the string
  * Return: 1 if string is palindrome otherwise 0
  */
-int recurision(char *s, int count)
+int recursion(char *s, int count)
 {
 	if (s == (s + count)|| (s + 1) == (s + count))
 	{
@@ -48,7 +48,9 @@ int recurision(char *s, int count)
  */
 int is_palindrome(char *s)
 {
-	if (*s == '' && *(s + 1) == '\0')
+	int str_count;
+
+	if (*s == '\0')
 	{
 		return (1);
 	}
