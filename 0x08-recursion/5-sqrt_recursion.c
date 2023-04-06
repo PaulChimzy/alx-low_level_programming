@@ -12,7 +12,7 @@ int recursion(int n, int guess)
 	{
 		return guess;
 	}
-	else if (guess > n // 2)
+	else if (guess > n / 2)
 	{
 		return (-1);
 	}
