@@ -34,7 +34,7 @@ int recursion(char *s, int count)
 	}
 	else if (*s == *(s + count))
 	{
-		return (recursion((s + 1), (count - 1)));
+		return (recursion((s + 1), (count - 2)));
 	}
 	else
 	{
