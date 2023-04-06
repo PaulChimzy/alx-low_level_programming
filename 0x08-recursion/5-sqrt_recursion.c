@@ -10,7 +10,7 @@ int recursion(int n, int guess)
 {
 	if (guess * guess == n)
 	{
-		return guess;
+		return (guess);
 	}
 	else if (guess > n / 2)
 	{
