@@ -24,7 +24,7 @@ int _strlen_recursion(char *s)
  */
 int recursion(char *s, int count)
 {
-	if (s == (s + count)|| (s + 1) == (s + count))
+	if (s == (s + count) || (s + 1) == (s + count))
 	{
 		if (*s == *(s + count))
 		{
