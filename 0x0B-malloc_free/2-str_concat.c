@@ -34,7 +34,7 @@ char *str_concat(char *s1, char *s2)
 			if (i < size_1)
 				arr[i] = *(s1 + i);
 			else
-				arr[i] = *(s2 + i);
+				arr[i] = *(s2 + i - size_1);
 		}
 		arr[size_1 + size_2] = '\0';
 	}
