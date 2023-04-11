@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 			else
 				arr[i] = *(s2 + i);
 		}
-		arr[size_1 + size_2] = '\0'
+		arr[size_1 + size_2] = '\0';
 	}
 	return (arr);
 }
