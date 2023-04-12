@@ -7,14 +7,14 @@
  */
 int main(int argc, char *argv[])
 {
-	int f_digit;
-	int s_digit;
+	int f_dt;
+	int s_dt;
 
 	if (argc == 3)
 	{
-		if (sscanf(argv[1], "%d", &f_digit) && sscanf(argv[2], "%d", &s_digit))
+		if (sscanf(argv[1], "%d", &f_dt) == 1 && sscanf(argv[2], "%d", &s_dt) == 1)
 		{
-			printf("%d\n", (f_digit * s_digit));
+			printf("%d\n", (f_dt * s_dt));
 			return (0);
 		}
 		else
