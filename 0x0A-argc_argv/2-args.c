@@ -7,9 +7,13 @@
  */
 int main(int argc, char *argv[])
 {
+	int count;
+
+	count = 0;
 	while (argc--)
 	{
-		printf("%s\n", argv[argc]);
+		printf("%s\n", argv[count]);
+		count++;
 	}
 	return (0);
 }
