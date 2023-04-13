@@ -11,7 +11,7 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *arr;
-	unsigned int i
+	unsigned int i;
 
 	arr = NULL;
 	if (ptr == NULL)
