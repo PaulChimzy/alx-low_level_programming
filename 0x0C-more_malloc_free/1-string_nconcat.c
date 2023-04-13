@@ -11,9 +11,9 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *arr;
-	int size_1;
+	unsigned int size_1;
 	unsigned int size_2;
-	int i;
+	unsigned int i;
 
 	size_1 = 0;
 	size_2 = 0;
