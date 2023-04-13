@@ -21,12 +21,9 @@ int *array_range(int min, int max)
 	arr = malloc(sizeof(int) * block_size);
 	if (arr == NULL)
 		return (arr);
-	else
+	for (i = 0; i < block_size; i++)
 	{
-		for (i = 0; i < block_size; i++)
-		{
-			*(arr + i) = min + i;
-		}
-		return (arr);
+		*(arr + i) = min + i;
 	}
+	return (arr);
 }
