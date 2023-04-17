@@ -3,9 +3,9 @@
 
 /**
  * main - prints the name of the file it is compiling
- * Return - 0 if everything works fine
+ * Return: 0 if everything works fine
  */
-int main()
+int main(void)
 {
 	printf("%s\n", __FILE__);
 	return (0);
