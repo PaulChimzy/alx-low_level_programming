@@ -9,14 +9,14 @@
 
 int _strlen(char *s)
 {
-        int count;
+	int count;
 
-        count = 0;
-        while (*(s + count) != '\0')
-        {
-                count++;
-        }
-        return (count);
+	count = 0;
+	while (*(s + count) != '\0')
+	{
+		count++;
+	}
+	return (count);
 }
 /**
  * _strcpy - copies a string to a buffer
@@ -26,19 +26,19 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-        int count;
+	int count;
 
-        count = 0;
-        while (*(src + count) != '\0')
-        {
-                *(dest + count) = *(src + count);
-                count++;
-        }
-        *(dest + count) = *(src + count);
-        return (dest);
+	count = 0;
+	while (*(src + count) != '\0')
+	{
+		*(dest + count) = *(src + count);
+		count++;
+	}
+	*(dest + count) = *(src + count);
+	return (dest);
 }
 /**
- * dog_t - creates a new dog and initializing
+ * new_dog - creates a new dog and initializing
  * @name: pointer to the name of the dog
  * @age: the age of the dog
  * @owner: pointer to teh owner of the dog
@@ -51,24 +51,25 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_ = NULL;
 
 	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
+		return (dog_);
 
 	dog_->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	dog_->age = age;
-	dog_->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 
-	if (dog_->name == NULL || dog_->owner == NULL)
+	if (dog_->name == NULL)
 	{
-		free(dog_->name);
-		free(dog_->owner);
 		free(dog_);
 		return (NULL);
 	}
-	else
+	dog_->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (dog_->owner == NULL)
 	{
-		dog_->name = _strcpy(dog_->name, name);
-		dog_->owner = _strcpy(dog_->owner, owner);
-	}	
+		free(dog_->name);
+		return (NULL);
+	}
+	dog_->age = age;
+	dog_->name = _strcpy(dog_->name, name);
+	dog_->owner = _strcpy(dog_->owner, owner);
 
 	return (dog_);
 }
