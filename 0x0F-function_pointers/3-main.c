@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "3-calc.h"
 /**
  * main - performs an operation on numbers given as arguments
@@ -18,12 +19,12 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	operator = get_op_func(*(argv + 2));
-	if (operator == NULL)
+	if (operator == NULL || *(argv[2] + 1) != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((operator == op_div || operator == op_mod) && atoi(*(argv + 3)) == 0)
+	if ((operator == op_div || operator == op_mod) && *(*(argv + 3)) == 48)
 	{
 		printf("Error\n");
 		exit(100);
