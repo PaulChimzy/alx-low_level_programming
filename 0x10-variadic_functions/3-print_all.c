@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	char *sep = ", ", *str;
 
 	va_start(argm, format);
-	while (*(format + i) != '\0')
+	while (format != NULL && *(format + i) != '\0')
 	{
 		if (*(format + i + 1) == '\0')
 			sep = "";
