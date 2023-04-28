@@ -3,55 +3,50 @@
 #include <string.h>
 #include "lists.h"
 /**
- * _strlen - determine the length of a string
- * @s: pointer to the string (array of characters)
- * Return: the length of the string
- */
-
-int _strlen(char *s)
-{
-	int count;
-
-	count = 0;
-	while (*(s + count) != '\0')
-	{
-		count++;
-	}
-	return (count);
-}
-
-/**
- * add_node_end - add node at the end of the linked list
+ * add_node_end - adds node to the end of a linked list
  * of elements in the list
- * @h: head pointer
- * Return: number of elements in the linked list
+ * @head: *pointer to the pointer of a node
+ * @str: string as a value to the linked list
+ * Return: pointer to the head node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
 	char *str1 = strdup(str);
-	int str_len = _strlen(str1);
-	list_t *second_node;
-	list_t *new_node;
+	int str_len = strlen(str1);
+	list_t *nextNode;
 
-	if ((*head) == NULL)
+	if (*head == NULL)
 	{
-		head = &new_node;
-		printf("Got here %d\n", str_len);
-		new_node->len = str_len;
-		printf("Got here %d\n", str_len);
-		new_node->str = str1;
-		new_node->next = NULL;
-		printf("Got here %d\n", str_len);
-		head = &new_node;
-		printf("Got here %d\n", str_len);
+		(*head) = malloc(sizeof(list_t));
+		if (*head != NULL)
+		{
+			(*head)->len = str_len;
+			(*head)->str = str1;
+			(*head)->next = NULL;
+		}
+		else
+			return (NULL);
 	}
 	else
 	{
-		second_node = (*head);
-		head = &new_node;
-		(*head)->len = str_len;
-		(*head)->str = str1;
-		(*head)->next = second_node;
+		nextNode = *head;
+		while (nextNode != NULL)
+		{
+			if (nextNode->next == NULL)
+			{
+				nextNode->next = malloc(sizeof(list_t));
+				if (nextNode->next != NULL)
+				{
+					nextNode->next->len = str_len;
+					nextNode->next->str = str1;
+					nextNode->next->next = NULL;
+					break;
+				}
+				else
+					return (NULL);
+			}
+			nextNode = nextNode->next;
+		}
 	}
-	return (NULL);
+	return (*head);
 }
