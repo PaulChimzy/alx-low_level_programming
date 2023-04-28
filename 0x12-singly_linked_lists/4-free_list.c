@@ -29,4 +29,5 @@ void free_list(list_t *head)
 		nextnode = nextnode->next;
 	}
 	free(head);
+	free(nextnode);
 }
