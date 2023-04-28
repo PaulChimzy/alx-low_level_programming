@@ -10,7 +10,6 @@
 void free_list(list_t *head)
 {
 	list_t *nextnode = head;
-	list_t *temp;
 
 	if (head == NULL)
 	{
@@ -26,10 +25,7 @@ void free_list(list_t *head)
 		*	printf("[0] (nil)\n");
 		*/
 		free(nextnode->str);
-		temp = nextnode->next;
-		free(nextnode->next);
-		nextnode = temp;
-		free(temp);
+		nextnode = nextnode->next;
 	}
 	free(head);
 	free(nextnode);
