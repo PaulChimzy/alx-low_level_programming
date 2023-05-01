@@ -22,13 +22,11 @@ void free_listint(listint_t *head)
 		{
 			if (nextnode->next == NULL)
 			{
-				free(nextnode->n);
 				free(nextnode);
 			}
 			else
 			{
 				tempnode = nextnode->next->next;
-				free(nextnode->n);
 				free(nextnode->next);
 				nextnode = tempnode;
 				free(tempnode);
