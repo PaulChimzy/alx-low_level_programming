@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * free_listint2 - frees up memory consumed by a linked list 
+ * free_listint2 - frees up memory consumed by a linked list
  * and sets the head to null
  * @head: pointer to a pointer of the linked list
  * Return: Nothing
@@ -24,6 +24,7 @@ void free_listint2(listint_t **head)
 			if (nextnode->next == NULL)
 			{
 				free(nextnode);
+				break;
 			}
 			else
 			{
