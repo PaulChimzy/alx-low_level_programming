@@ -2,31 +2,24 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- * add_nodeint - add a node at the beginning of the new linked list
- * @head: pointer to the pointer if the head node
- * @n: value to be stored in the new node added
- * Return: pointer to the new node added
+ * pop_listint - deletes the headnode of a linked list
+ * @head: pointer to the pointer of the head node
+ * Return: the data in the head node
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+int pop_listint(listint_t **head)
 {
 	listint_t *newnode;
+	int n;
 
 	if (*head == NULL)
 	{
-		*head = malloc(sizeof(listint_t));
-		if (*head == NULL)
-			return (NULL);
-		(*head)->n = n;
-		(*head)->next = NULL;
+		return (0);
 	}
 	else
 	{
-		newnode = malloc(sizeof(listint_t));
-		if (newnode == NULL)
-			return (NULL);
-		newnode->n = n;
-		newnode->next = *head;
+		newnode = (*head)->next;
+		n = (*head)->n;
 		*head = newnode;
 	}
-	return (*head);
+	return (n);
 }
