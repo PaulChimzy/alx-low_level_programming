@@ -11,7 +11,7 @@ int flip_bits(unsigned long int n, unsigned int index)
 {
 	unsigned long int manipulate = n ^ index;
 	unsigned long int bits = 0;
-	
+
 	while (manipulate > 0)
 	{
 		bits += (manipulate & 1);
