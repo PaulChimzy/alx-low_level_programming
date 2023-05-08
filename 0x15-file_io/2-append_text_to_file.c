@@ -21,7 +21,7 @@ int _strlen(char *s)
 	return (count);
 }
 /**
- * create_file - appends text to a file
+ * append_text_to_file - appends text to a file
  * @filename: pointer to the filename to be created
  * @text_content: Text to be written to the file
  * Return: 1 if it is successful and -1 otherwise
