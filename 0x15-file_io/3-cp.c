@@ -44,7 +44,17 @@ int main(int ac, char **av)
 		while (read_in != 0)
 		{
 			read_in = read(fp_r, text_content, 1024);
-			write(fp_w, text_content, read_in);
+			if (read_in < 0)
+			{
+				dprintf(2, "Error: Can't read from file %s\n", av[1]);
+				exit(98);
+			}
+			if (write(fp_w, text_content, read_in) < 0)
+			{
+				dprintf(2, "Error: Can't write to %s\n", av[2]);
+				exit(99);
+			}
+
 		}
 		if (close(fp_r) < 0)
 		{
