@@ -31,12 +31,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (writings != NULL)
 		{
 			read_in = read(fp, writings, letters);
-			if (read_in > 0)
-			{
-				write_out = write(1, writings, read_in);
-				if (write_out < 0)
-					return (0);
-			}
+			if (read_in < 0)
+				return (0);
+			write_out = write(1, writings, read_in);
+			if (write_out < 0)
+				return (0);
 			close(fp);
 		}
 		else
