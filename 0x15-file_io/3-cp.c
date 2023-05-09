@@ -20,12 +20,12 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: %s file_from file_to\n", av[0]);
 		exit(97);
 	}
-
+	/*
 	if (av[1] == NULL)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
-	}
+	}*/
 	fp_r = open(av[1], O_RDONLY);
 	if (fp_r < 0)
 	{
