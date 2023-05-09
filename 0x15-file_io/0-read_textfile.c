@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t read_in;
 	ssize_t write_out;
-	char *writings = malloc(letters);
+	char *writings = malloc(letters + 1);
 	int fp;
 
 	if (filename == NULL)
@@ -28,11 +28,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	else
 	{
-		read_in = read(fp, writings, letters);
-		close(fp);
-		if (read_in > 0)
+		if (writings != NULL)
 		{
-			write_out = write(1, writings, letters);
+			read_in = read(fp, writings, letters);
+			if (read_in > 0)
+			{
+				write_out = write(1, writings, letters);
+			}
+			close(fp);
 		}
 	}
 	return (write_out);
