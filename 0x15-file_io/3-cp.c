@@ -35,7 +35,7 @@ int main(int ac, char **av)
 	fp_w = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fp_w < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", av[2]);
+		dprintf(2, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 
@@ -46,8 +46,14 @@ int main(int ac, char **av)
 			read_in = read(fp_r, text_content, 1024);
 			write(fp_w, text_content, read_in);
 		}
-		if (close(fp_r) < 0 || close(fp_w) < 0)
+		if (close(fp_r) < 0)
 		{
+			dprintf(2, "Error: Can't close fd %d\n", fp_r);
+			exit(100);
+		}
+		else if (close(fp_w) < 0)
+		{
+			dprintf(2, "Error: Can't close fd %d\n", fp_w);
 			exit(100);
 		}
 	}
